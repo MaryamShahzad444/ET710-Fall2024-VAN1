@@ -96,33 +96,52 @@
                         </div>
                     </p>
                     <p>
-                        <div>
-                            <strong>
-                                <label for="reason">
-                                    WHAT IS THE REASON FOR REACHING OUT? <span class="required">*</span>
-                                </label>
-                            </strong>
-                        </div>
-                        <br>
+                       <div>
+                           <strong>
+                               <label for="reason">
+                                   WHAT IS THE REASON FOR REACHING OUT? <span class="required">*</span>
+                               </label>
+                           </strong>
+                       </div>
+                       <br>
 
-                         <div>
-                             <select name="reason" required>
-                                 <option value="" selected>
-                                     Pick One...
-                                 </option>
-                                 <option value="Inquired About Work">
-                                     Inquired About Work
-                                 </option>
-                                 <option value="Freelance Work">
-                                     Freelance Work
-                                 </option>
-                                 <option value="Incorect Invoice">
-                                     Incorect Invoice
-                                 </option>
-                             </select>     
-                         </div>
-                    </p>
+                       <div>
+                           <select name="reason" required>
+                               <option value="" selected>
+                                   Pick One...
 
+                            </option>
+                            <option value="Inquiry About Work">
+                                Inquiry About Work
+                            </option>
+                            <option value="Freelance Work">
+                                Freelance Work
+                            </option>
+                            <option value="Incorrect Invoice">
+                                Incorrect Invoice
+                            </option>
+                            <option value="General Question">
+                                General Question
+                            </option>
+                        </select>
+                    </div>
+                    
+                </p>
+                <hr>
+                <p>
+                    <div>
+                        <strong>
+                            <label for="message">
+                                HOW MAY I HELP YOU?
+                            </label>
+                        </strong>
+                    </div>
+                    <br>
+
+                    <textarea name="message" rows="15" cols="100" class="padding" placeholder="Please enter query..."></textarea>
+                </p>
+                <button class="btn" type="submit">Submit &gt;&gt;</button>
+                <button class="btn" type="reset">Start Over</button>
                 </form>
             </section>
         </main>
