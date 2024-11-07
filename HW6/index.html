@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> DOM Manipulation Exapmle</title>
+        <script type="text/javascript">
+           let wait_time_timeout;
+           const WAIT_TIMe = 3000. // Time to wait in seconds
+
+           function changeText () {
+            // Stop any pending timeouts
+            clearTimeout(wait_time_timeout);
+
+            let new_text="Text has been changed!";
+
+            render(new_text);
+
+            //Reassign a new value
+            new_text = "Original Text...";
+            wait_time_timeout = setTimeout(function(){
+                render(new_text);
+            }, WAIT_TIME);
+
+           }
+           function render(text) {
+            document.getElementById("myParagraph").textContant = text;
+           }
+
+        </script>
+    </head>
+    <body>
+        <p id="myParagraph"> Original text ... </p>
+        <button onclick="changeText()"> Change Text</button>
+    </body>
+</html>
+
