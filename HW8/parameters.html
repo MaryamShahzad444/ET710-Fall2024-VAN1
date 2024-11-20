@@ -4,12 +4,12 @@
         <h1>JavaScript Function Example</h1>
         <div id="message"></div>
         <script type="text/javascript">
-            function myFunctionWithParameters(param1,param2, param3) {
+            function myFunctionWithParameters(param1, param2, param3) {
                 let message = param1 + "<br>";
-                message +=param2 +"<br>";
+                message +=param2 + "<br>";
                 message +=param3;
 
-                // We used innerHTML becausewe need to render HTML tags  in our message.
+                // We used innerHTML because we need to render HTML tags in our message.
                 document.getElementById("message").innerHTML = message;
             }
 
@@ -17,13 +17,13 @@
             let number2 = 10;
             let number3 = 15;
 
-            //Using variables
+            // Using variables
             myFunctionWithParameters(number1, number2, number3);
 
             // Using literal numbers
             //myfunctionWithParameters(30, 50, 10);
 
-            //Using expressions and variables
+            // Using expressions and variables
             //myFunctonWithParameters(number1 + 5, number2, 6 * 2);
         </script>
     </body>
