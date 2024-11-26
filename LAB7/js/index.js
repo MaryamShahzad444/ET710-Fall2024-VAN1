@@ -34,5 +34,5 @@ form.addEventListener("submit", function(event) {
 
     // Reset the form and validation state
     form.reset();
-    form.classList.remover('was-validated');
+    form.classList.remove('was-validated');
 });
