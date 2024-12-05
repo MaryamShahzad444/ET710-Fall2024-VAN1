@@ -1,13 +1,13 @@
 function checkDate()
 {
-    const userDate = document.form["dateForm"]["userDate"];
+    const userDate = document.forms["dateForm"]["userDate"].value;
     const outputMsg = document.getElementById('output');
 
     let isWeekend = checkIfWeekend(userDate);
-    let isHolidsay = checkIfHoliday(userDate);
+    let isHoliday = checkIfHoliday(userDate);
 
-    if(isWeekend || isHolisay)
-    {           
+    if(isWeekend || isHoliday)
+    {         
         outputMsg.textContent = "You can relax today.";
     }
     else
@@ -20,18 +20,33 @@ function checkIfWeekend(today = "")
 {
     let date = new Date(today);
     // 0 - 6
-    let currentDateOfWeek = date.getUTCDay();
-    
-    return false;
+    let currentDayOfWeek = date.getUTCDay();
+
+    //Check if it's Friday (5), Saturdy (6), or Sunday (0) 
+    if (currentDayOfWeek === 5 || currentDayOfWeek === 6 || currentDayOfWeek === 0) {
+        return true;
+    } else {
+        return false;
+    }
+
 }
 
 function checkIfHoliday(today = "")
 {
-    let date = newDate(today);
+    let date = new Date(today);
     let currentDayofMonth = date.getUTCDate();
     // Add 1 because the result is zero based.
     // 0 - 11
-    let currentMonth = (date.getMonth() + 1);
+    let currentMonth = (date.getMonth() + 1); 
+    //Add 1 to make it (1-12)
+    //Check for Holidays
+    if(
+        (currentMonth === 12 && currentDayofMonth === 25) || //Christmas
+        (currentMonth === 7 && currentDayofMonth === 4) || //Fourth of July
+        (currentMonth === 11 && currentDayofMonth === 28) || //Thanksgiving
+    ) {
 
     return false;
-}
+    } else {
+    return false;
+    } 
