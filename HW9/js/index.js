@@ -1,6 +1,6 @@
 function checkDate()
 {
-    const userDate = document.forms["dateForm"]["userDate"].value;
+    const userDate = document.forms["dateForm"]["userData"].value;
     const outputMsg = document.getElementById('output');
 
     let isWeekend = checkIfWeekend(userDate);
@@ -43,7 +43,7 @@ function checkIfHoliday(today = "")
     if(
         (currentMonth === 12 && currentDayofMonth === 25) || //Christmas
         (currentMonth === 7 && currentDayofMonth === 4) || //Fourth of July
-        (currentMonth === 11 && currentDayofMonth === 28) || //Thanksgiving
+        (currentMonth === 11 && currentDayofMonth === 28)  //Thanksgiving
      ) {
      
         return true;
