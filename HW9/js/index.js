@@ -44,9 +44,9 @@ function checkIfHoliday(today = "")
         (currentMonth === 12 && currentDayofMonth === 25) || //Christmas
         (currentMonth === 7 && currentDayofMonth === 4) || //Fourth of July
         (currentMonth === 11 && currentDayofMonth === 28) || //Thanksgiving
-    ) {
-
-    return false;
+     ) {}
+    
+    return true;
     } else {
     return false;
     } 
