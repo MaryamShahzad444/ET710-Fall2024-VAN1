@@ -8,21 +8,30 @@ function showTodo(day) {
     } else if (day === 'sunday') {
         displaySunday();
     } else {
-        clear();
-        window.alert("Sorry, but that day is unavaible.");
+      clear();
+      window.alert("Sorry, but that day is unavaible.");
     }
 }
 
 function displayFriday() {
-    const TODO= [
+    const TODO = [
         "English Homework",
         "Finish Science Project",
         "Pick up Dry Cleaning"
     ];
 
-    display(TODO)
+    display(TODO);
 }
 
+function displaySaturday() {
+    const TODO = [
+        "Laundry",
+        "Wash Dishes",
+        "Grocery Shopping"
+    ];
+
+    display(TODO);
+}
 function display(list) {
     clear();
 
@@ -33,10 +42,13 @@ function display(list) {
 
         li.textContent = list[index];
         ol.appendChild(li);
+      }
+
+      myTodos.appendChild(ol);
     }
 
     function clear() {
         myTodos.innerHtml = "";
     }
 
-}
+ 
