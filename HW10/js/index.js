@@ -2,7 +2,7 @@
 const messages = [
     "Welcome to our website!",
     "Explore the latest updates.",
-    "Contact us fore morer information.",
+    "Contact us fore more information.",
     "Thank you for visiting!"
 ];
 
