@@ -56,10 +56,10 @@ function display(list) {
       }
 
       myTodos.appendChild(ol);
-    }
-
-    function clear() {
-      myTodos.innerHtml = "";
-    }
+}
+  
+function clear() {
+      myTodos.innerHTML = "";
+}
 
  
