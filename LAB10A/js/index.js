@@ -2,11 +2,11 @@ const myTodos = document.getElementById("myTodos");
 
 function showTodo(day) {
     if (day === 'friday') {
-        displayFriday();
+      displayFriday();
     } else if (day === 'saturday') {
-        displaySaturday();
+      displaySaturday();
     } else if (day === 'sunday') {
-        displaySunday();
+      displaySunday();
     } else {
       clear();
       window.alert("Sorry, but that day is unavaible.");
@@ -32,13 +32,24 @@ function displaySaturday() {
 
     display(TODO);
 }
+
+function displaySunday() {
+    const TODO = [
+        "Complete English Essay",
+        "Bake Brownies for Bake Sale on Tuesday",
+        "Pickup Gift for Nephew"
+    ];
+
+    display(TODO);
+}
+
 function display(list) {
     clear();
 
     const ol = document.createElement("ol");
 
     for (let index = 0; index < list.length; index++) {
-        let li = document.createElement("li");
+      let li = document.createElement("li");
 
         li.textContent = list[index];
         ol.appendChild(li);
@@ -48,7 +59,7 @@ function display(list) {
     }
 
     function clear() {
-        myTodos.innerHtml = "";
+      myTodos.innerHtml = "";
     }
 
  
